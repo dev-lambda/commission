@@ -1,6 +1,6 @@
-# api-template project
+# commission project
 
-- Full documentation [here](https://dev-lambda.github.io/api-template/)
+- Full documentation [here](https://dev-lambda.github.io/commission/)
 
 This template is a base for API projects. It provides a base structure for api code, tests, documentation and publication logic.
 

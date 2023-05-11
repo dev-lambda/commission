@@ -9,7 +9,7 @@ sidebar_position: 7
 ### Build the image
 
 ```sh
-docker build . -t api-template:local
+docker build . -t commission:local
 ```
 
 ### Launch a development instance of mongodb (if needed) {#mongodb}
@@ -41,12 +41,12 @@ Make sure a mongodb instance is running locally
 ```sh
 docker run \
   --rm \
-  --name api-template \
+  --name commission \
   -p 80:8000 \
   --net local \
   --env mongoDbHost="mongodb://mongodb-dev:27017/prod" \
   --env logLevel="debug" \
-  api-template:local
+  commission:local
 ```
 
 This will keep a running instance attached to your terminal in order to easily monitor logs and will map the internal container port 80 to your local 8000 port. Your docker running server should be available at [http://localhost:8000/](http://localhost:8000/).
@@ -123,7 +123,7 @@ git push --tags
 ```
 :::
 
-Docker images are published to the [github project's docker repository](https://github.com/dev-lambda/api-template/pkgs/container/api-template)
+Docker images are published to the [github project's docker repository](https://github.com/dev-lambda/commission/pkgs/container/commission)
 
 ### Deploy
 
@@ -135,13 +135,13 @@ The documentation website is a static website built from the `/website` folder c
 
 The api documentation depends on the openAPI specification built from the `@openapi`-tagged jsdoc comments in the API codebase. This is thus a required step before compiling the static website.
 
-Once the static site built, the contents are published to a `gh-pages` branch in the same repository. This branch is then published to the dedicated github page at: [https://dev-lambda.github.io/api-template/](https://dev-lambda.github.io/api-template/)
+Once the static site built, the contents are published to a `gh-pages` branch in the same repository. This branch is then published to the dedicated github page at: [https://dev-lambda.github.io/commission/](https://dev-lambda.github.io/commission/)
 
 The action requires permissions to read and write on the repository. These permissions are requested by the action yaml file.
 
 #### Github Setup
 
-In order to activate the page publishing you need to set the following project setting on the [Github pages setup](https://github.com/dev-lambda/api-template/settings/pages):
+In order to activate the page publishing you need to set the following project setting on the [Github pages setup](https://github.com/dev-lambda/commission/settings/pages):
 
 - Deploy from a branch `gh-pages` `/(root)`
 

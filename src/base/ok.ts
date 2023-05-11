@@ -43,5 +43,5 @@ export interface message {
  *   - name: API
  *     description: API specific routes
  *     externalDocs:
- *       url: https://dev-lambda.github.io/api-template/
+ *       url: https://dev-lambda.github.io/commission/
  */

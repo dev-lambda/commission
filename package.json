@@ -1,11 +1,11 @@
 {
-  "name": "api-template",
+  "name": "commission",
   "version": "1.0.0",
-  "description": "API Template project",
+  "description": "Commission project",
   "main": "src/index.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dev-lambda/api-template"
+    "url": "https://github.com/dev-lambda/commission"
   },
   "engines": {
     "node": "^18"
