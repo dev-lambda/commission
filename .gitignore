@@ -1,0 +1,6 @@
+node_modules
+dist
+coverage
+licenses.json
+config/local*.yaml
+.DS_Store
