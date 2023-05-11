@@ -1,7 +1,58 @@
-# commission documentation
+# Commission
 
-Explain what this project does
+Asynchronous job queuing and execution tracking system.
 
 ## Features
 
-- List features
+### Commissions dispatch and execution tracking
+
+- Dispatch background jobs to dedicated microservices
+- Job Submission: Commission allows clients to submit jobs for asynchronous processing.
+- Job Management: Commission provides an interface for monitoring the progress of jobs and retrieving the results when they are completed.
+- Job Prioritization: Commission allows for jobs to be prioritized based on their importance or urgency.
+- Track job execution status
+
+### Integrity 
+
+- Ensure that each job request is processed at least once and successfully so at most once (unless cancelled or expired).
+
+### Execution control
+
+- Schedule execution.
+- Cancel, reschedule job requests.
+- Set a validity expiration date.
+- Automatic Retry: Commission provides automatic retry functionality for failed jobs, with configurable retry policies and backoff strategies.
+- Dead Letter Queue: Commission can route failed jobs to a dead letter queue, allowing for manual inspection and debugging of failed jobs.
+
+### Error recovery
+
+- Recover from microservices errors, replay commissions
+- Error Handling: Commission provides configurable error handling mechanisms to manage job failures and retries.
+- Graceful Degradation: Commission can gracefully degrade functionality when dependent microservices are unavailable, allowing other jobs to continue processing.
+
+### Observability
+
+- Monitor background job activity
+- Real-Time Monitoring: Commission provides real-time monitoring of job progress, allowing clients to view updates on job status as they occur.
+- Reporting: Commission provides reporting and analytics features, allowing clients to track job performance and identify areas for optimization.
+- Error Logging: Commission can log errors and exceptions for debugging purposes, providing insights into the root cause of job failures.
+
+### Security
+
+- Security: Commission provides authentication and authorization mechanisms to ensure that only authorized users can submit and monitor jobs.
+- Circuit Breaking: Commission can implement circuit breaking patterns to detect and handle failures in downstream microservices, preventing cascading failures.
+
+### Integration
+
+- Commission makes no assumption on the technology used to execute jobs, instead it provides a protocol for job execution tracking that can be easily integrated on your current codebase.
+- ~~Message Queue Integration: Commission can integrate with a variety of message queue technologies, such as RabbitMQ or Kafka, to manage job queues.~~
+- Customization: Commission is highly customizable, allowing for configuration of parameters such as timeout durations, retry limits, and worker node capacity.
+
+### Scalability
+
+- Scalability: Commission is designed to scale horizontally, allowing for multiple worker nodes to process jobs in parallel.
+- Load Balancing: Commission can implement load balancing techniques to distribute job processing across multiple worker nodes, improving fault tolerance and scalability.
+- ~~Service Discovery: Commission can use service discovery mechanisms to dynamically locate available worker nodes, ensuring that jobs are processed even when worker nodes fail or come online.~~
+- Health Checks: Commission can implement health checks to monitor the availability and performance of worker nodes, ensuring that only healthy nodes are used for job processing.
+
+

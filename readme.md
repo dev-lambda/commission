@@ -1,17 +1,5 @@
-# commission project
+# Commission
+
+Asynchronous job queuing and execution tracking system.
 
 - Full documentation [here](https://dev-lambda.github.io/commission/)
-
-This template is a base for API projects. It provides a base structure for api code, tests, documentation and publication logic.
-
-Mosts of the pre-configured features are documented on the documentation website.
-
-## Features
-
-- Typescript and development npm scripts setup
-- Express server and project configuration
-- Docker image
-- Test setup including coverage report
-- CI Build and publishing
-- General and API documentation including publication logic
-- License checking
