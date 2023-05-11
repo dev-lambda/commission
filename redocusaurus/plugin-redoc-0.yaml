@@ -1,19 +1,19 @@
 openapi: 3.0.0
 info:
-  description: API Template project
-  title: api-template
+  description: Commission project
+  title: commission
   version: 1.0.0
   license:
     name: ISC
-    url: https://dev-lambda.github.io/api-template/license
-  termsOfService: https://dev-lambda.github.io/api-template/terms
+    url: https://dev-lambda.github.io/commission/license
+  termsOfService: https://dev-lambda.github.io/commission/terms
   contact:
     name: API Support
     email: support@devlambda.com
-    url: http://dev-lambda.github.io/api-template/support
+    url: http://dev-lambda.github.io/commission/support
   externalDocs:
     description: Full documentation site
-    url: https://dev-lambda.github.io/api-template/
+    url: https://dev-lambda.github.io/commission/
 servers:
   - url: http://localhost:3000/
     description: Development server
@@ -212,4 +212,4 @@ tags:
   - name: API
     description: API specific routes
     externalDocs:
-      url: https://dev-lambda.github.io/api-template/
+      url: https://dev-lambda.github.io/commission/
